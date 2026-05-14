@@ -1,10 +1,24 @@
-# Java API Service Starter
+# trabajo practico 5 progrmaacion 3
+## tostring, equals, hashcode 
 
-This is a minimal Java API service starter based on [Google Cloud Run Quickstart](https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-java-service).
+    
+    TP_ToString_Colecciones/
+    ├── src/
+    │   └── main/
+    │       ├── java/
+    │       │   └── com.tup.programacion3/
+    │       │       ├── entities/
+    │       │       │   ├── Categoria.java
+    │       │       │   ├── DetallePedido.java
+    │       │       │   ├── Pedido.java
+    │       │       │   ├── Producto.java
+    │       │       │   └── Usuario.java
+    │       │       ├── enums/
+    │       │       │   ├── Estado.java
+    │       │       │   ├── FormaPago.java
+    │       │       │   └── Rol.java
+    │       │       └── Main.java
+    │       └── resources/
+    ├── build.gradle
+    └── settings.gradle
 
-## Getting Started
-
-Server should run automatically when starting a workspace. To run manually, run:
-```sh
-mvn spring-boot:run
-```
