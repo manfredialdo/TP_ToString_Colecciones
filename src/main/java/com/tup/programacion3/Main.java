@@ -7,14 +7,14 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("====== INICIANDO SIMULACIÓN PROFESIONAL CON REGLAS UML Y SETS ======\n");
+        System.out.println("====== SIMULACIÓN CON REGLAS UML Y SETS ======\n");
 
-        // 1. INSTANCIAR 3 CATEGORÍAS (Requisito 3.c)
+        // 1. INSTANCIAR 3 CATEGORÍAS (3.c)
         Categoria catElectro = new Categoria(1L, "Electrónica", "Dispositivos de vanguardia");
         Categoria catHogar = new Categoria(2L, "Hogar", "Confort para el living");
         Categoria catIndumentaria = new Categoria(3L, "Indumentaria", "Moda urbana");
 
-        // 2. INSTANCIAR 10 PRODUCTOS (Requisito 3.d)
+        // 2. INSTANCIAR 10 PRODUCTOS (3.d)
         Producto p1 = new Producto(101L, "Televisor 55'", 450000.0, "Smart TV 4K", 15, "tv55.png", true);
         Producto p2 = new Producto(102L, "Celular S24", 950000.0, "128GB Almacenamiento", 8, "s24.png", true);
         Producto p3 = new Producto(103L, "Auriculares BT", 45000.0, "Noise Cancelling", 50, "headphones.png", true);
@@ -61,10 +61,10 @@ public class Main {
         user2.agregarPedido(ped3);
 
         // ================= PRESENTACIÓN DE RESULTADOS POR CONSOLA =================
-        System.out.println("🔹 [A] VERIFICACIÓN DE UN PRODUCTO INDIVIDUAL (toString):");
+        System.out.println("[A] VERIFICACIÓN DE UN PRODUCTO INDIVIDUAL (toString):");
         System.out.println("   " + p1 + "\n");
 
-        System.out.println("🔹 [B] LISTADO COMPLETO DE PRODUCTOS POR CATEGORÍA:");
+        System.out.println("[B] LISTADO COMPLETO DE PRODUCTOS POR CATEGORÍA:");
         Set<Categoria> conjuntoCategorias = Set.of(catElectro, catHogar, catIndumentaria);
         for (Categoria cat : conjuntoCategorias) {
             System.out.println("   📍 " + cat);
@@ -74,7 +74,7 @@ public class Main {
         }
         System.out.println();
 
-        System.out.println("🔹 [C] HISTORIAL COMPLETO DEL USUARIO MAS ACTIVO:");
+        System.out.println("[C] HISTORIAL COMPLETO DEL USUARIO MAS ACTIVO:");
         Set<Usuario> conjuntoUsuarios = Set.of(user1, user2);
         Usuario clienteMasActivo = user1;
         for (Usuario u : conjuntoUsuarios) {
@@ -91,7 +91,7 @@ public class Main {
         }
         System.out.println();
 
-        System.out.println("🔍 [D] PRUEBA DE IDENTIDAD DE OBJETOS Y UNICIDAD EN SETS:");
+        System.out.println("[D] PRUEBA DE IDENTIDAD DE OBJETOS Y UNICIDAD EN SETS:");
         Producto clonP1 = new Producto(101L, "Televisor 55'", 450000.0);
         System.out.println("   ¿p1.equals(clonP1) basado en ID?: " + p1.equals(clonP1));
         
@@ -100,6 +100,6 @@ public class Main {
         int tamañoDespues = catElectro.getProductos().size();
         
         System.out.println("   Elementos en Set iniciales: " + tamañoAntes + " | Elementos tras intentar duplicar: " + tamañoDespues);
-        System.out.println("   ✅ Éxito absoluto: El Set bloqueó el clon utilizando el contrato equals/hashCode.");
+        System.out.println("   Éxito absoluto: El Set bloqueó el clon utilizando el contrato equals/hashCode.");
     }
 }

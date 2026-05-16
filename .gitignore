@@ -1,58 +1,30 @@
-<<<<<<< HEAD
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
-
-### Eclipse ###
-=======
-HELP.md
+# Carpetas de compilación (Maven, IntelliJ, Gradle)
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+out/
+bin/
+build/
 
-### STS ###
->>>>>>> dc7400161618758c910207f7b1fd86474b7af175
-.apt_generated
+# Configuraciones de IDEs (IntelliJ, Eclipse, NetBeans, VS Code)
+.idea/
+*.iml
+*.iws
+*.ipr
 .classpath
-.factorypath
 .project
-.settings
+.settings/
+.apt_generated
+.factorypath
 .springBeans
 .sts4-cache
-<<<<<<< HEAD
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-=======
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
->>>>>>> dc7400161618758c910207f7b1fd86474b7af175
-
-### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-<<<<<<< HEAD
-
-### VS Code ###
 .vscode/
 
-### Mac OS ###
+# Archivos del sistema y temporales
+HELP.md
+.kotlin
+Thumbs.db
 .DS_Store
-=======
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
-.vscode/
->>>>>>> dc7400161618758c910207f7b1fd86474b7af175
