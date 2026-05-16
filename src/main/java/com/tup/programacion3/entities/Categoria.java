@@ -8,7 +8,7 @@ public class Categoria extends Base {
     private String nombre;
     private String descripcion;
     
-    // AGREGACIÓN (◊→): Multiplicidad 1..m controlada mediante Set de Productos independientes
+    // AGREGACIÓN (◊→): Productos con vida propia asociados a la categoría
     private Set<Producto> productos = new HashSet<>();
 
     public Categoria() {
@@ -36,7 +36,6 @@ public class Categoria extends Base {
     public String getDescripcion() { return descripcion; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
     public Set<Producto> getProductos() { return productos; }
-    public void setProductos(Set<Producto> productos) { this.productos = productos; }
 
     @Override
     public boolean equals(Object o) {

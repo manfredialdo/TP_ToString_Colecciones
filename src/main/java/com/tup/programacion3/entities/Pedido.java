@@ -13,7 +13,7 @@ public class Pedido extends Base implements Calculable {
     private Double total;
     private FormaPago formaPago;
     
-    // COMPOSICIÓN (♦→): Pedido contiene y controla el ciclo de vida de DetallePedido
+    // COMPOSICIÓN (♦→): El Pedido instancia e incorpora sus detalles internamente
     private Set<DetallePedido> detalles = new HashSet<>();
 
     public Pedido() {
@@ -40,7 +40,7 @@ public class Pedido extends Base implements Calculable {
         this.total = acumulado;
     }
 
-    // Regla de Composición: El Main solo pasa los datos y el Pedido crea internamente el objeto
+    // Regla de Oro de la Composición: El objeto se fabrica acá adentro
     public void addDetallePedido(int cantidad, Producto producto) {
         if (producto != null && cantidad > 0) {
             DetallePedido nuevoDetalle = new DetallePedido(cantidad, producto);
@@ -72,10 +72,9 @@ public class Pedido extends Base implements Calculable {
     public void setEstado(Estado estado) { this.estado = estado; }
     public Double getTotal() { return total; }
     public void setTotal(Double total) { this.total = total; }
+    public Set<DetallePedido> getDetalles() { return detalles; }
     public FormaPago getFormaPago() { return formaPago; }
     public void setFormaPago(FormaPago formaPago) { this.formaPago = formaPago; }
-    public Set<DetallePedido> getDetalles() { return detalles; }
-    public void setDetalles(Set<DetallePedido> detalles) { this.detalles = detalles; }
 
     @Override
     public boolean equals(Object o) {

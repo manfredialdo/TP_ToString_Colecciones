@@ -13,7 +13,7 @@ public class Usuario extends Base {
     private String contraseña;
     private Rol rol;
     
-    // Multiplicidad 1..m implementada estrictamente mediante Set
+    // Relación Unidireccional 1..m: El usuario conoce sus pedidos
     private Set<Pedido> pedidos = new HashSet<>();
 
     public Usuario() {
@@ -30,7 +30,6 @@ public class Usuario extends Base {
         this.rol = rol;
     }
 
-    // Lógica de sincronización bidireccional limpia para la colección
     public void agregarPedido(Pedido pedido) {
         if (pedido != null) {
             this.pedidos.add(pedido);
@@ -50,7 +49,6 @@ public class Usuario extends Base {
     public Rol getRol() { return rol; }
     public void setRol(Rol rol) { this.rol = rol; }
     public Set<Pedido> getPedidos() { return pedidos; }
-    public void setPedidos(Set<Pedido> pedidos) { this.pedidos = pedidos; }
 
     @Override
     public boolean equals(Object o) {
