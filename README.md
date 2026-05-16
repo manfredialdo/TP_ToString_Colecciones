@@ -22,3 +22,17 @@
     ├── build.gradle
     └── settings.gradle
 
+
+
+
+### 1. Limpiar y Compilar el Proyecto
+Asegurate de generar los archivos `.class` actualizados ejecutando Maven:
+```bash
+mvn clean compile
+```
+### 2. y luego
+```bash
+java -cp target/classes com.tup.programacion3.Main
+
+``` 
+
